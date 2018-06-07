@@ -1,0 +1,1 @@
+gst-launch-1.0 tcpclientsrc port=6501 host=127.0.0.1 ! decodebin ! autoaudiosink sync=false
