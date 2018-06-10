@@ -31,9 +31,9 @@ function response(mqueuemessage, res, message){
   res.end(message);
 }
 
-app.post('/dispatcher/:username', (req, res) => {
+app.post('/dispatcher/:username/:filename', (req, res) => {
   user = req.params.username;
-  response(getter, res, "./Stalemate.mp3");
+  response(getter, res, `./music/${req.params.filename}`);
 });
 
 app.post('/connection/:username', (req, res) => {
